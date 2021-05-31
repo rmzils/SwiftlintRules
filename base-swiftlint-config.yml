@@ -25,7 +25,7 @@ identifier_name:
   max_length: 
     warning: 40
     error: 60
-  exclude:
+  excluded:
   - id
   - URL
   - GlobalAPIKey
