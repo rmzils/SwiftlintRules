@@ -2,7 +2,6 @@ disabled_rules: # rule identifiers to exclude from running
   - colon
   - comma
   - control_statement
-  - type_name
 opt_in_rules: # some rules are only opt-in
   - empty_count
 analyzer_rules:
@@ -16,6 +15,20 @@ type_body_length:
   warning: 300
 file_length:
   warning: 500
+type_name:
+  min_length: 3
+  max_length: 
+    warning: 40
+    error: 60
+identifier_name:
+  min_length: 3
+  max_length: 
+    warning: 40
+    error: 60
+  exclude:
+  - id
+  - URL
+  - GlobalAPIKey
 nesting:
   type_level: 2
 reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)
