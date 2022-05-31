@@ -293,4 +293,4 @@ type_contents_order:
     [SwiftLintFramework.TypeContent.subscript]
   ]
 
-reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)
+reporter: "csv" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)
