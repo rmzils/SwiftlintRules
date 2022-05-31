@@ -1,27 +1,126 @@
-disabled_rules: # rule identifiers to exclude from running
-  - colon
-  - comma
-  - control_statement
-opt_in_rules: # some rules are only opt-in
-  - empty_count
+excluded:
+  - Pods, Tests, Products, Frameworks
+
+# Opt-In Rules
+opt_in_rules:
+# Idiomatic Rules
+ - fatal_error_message
+ - file_name_no_space
+ - force_unwrapping
+ - joined_default_parameter
+ - legacy_multiple
+ - prefer_zero_over_explicit_init
+ - redundant_nil_coalescing
+ - return_value_from_void_function
+ - static_operator
+
+# Lint Rules
+ - anyobject_protocol
+ - overridden_super_call
+ - prohibited_interface_builder
+ - prohibited_super_call
+ - weak_delegate
+
+# Metrics Rules
+ - closure_body_length
+ - enum_case_associated_values_count
+
+# Performance Rules
+ - contains_over_filter_count
+ - contains_over_filter_is_empty
+ - contains_over_first_not_nil
+ - contains_over_range_nil_comparison
+ - empty_collection_literal
+ - empty_count
+ - empty_string
+ - first_where
+ - flatmap_over_map_reduce
+ - last_where
+ - reduce_into
+ - sorted_first_last
+
+# Style Rules
+ - closure_end_indentation
+ - closure_spacing
+ - collection_alignment
+ - implicit_return
+ - indentation_width
+ - literal_expression_end_indentation
+ - legacy_multiple
+ - multiline_arguments
+ - multiline_arguments_brackets
+ - multiline_literal_brackets
+ - multiline_parameters
+ - multiline_parameters_brackets
+ - operator_usage_whitespace
+ - trailing_closure
+ - unneeded_parentheses_in_closure_argument
+ - vertical_parameter_alignment_on_call
+ - vertical_whitespace_closing_braces
+ - vertical_whitespace_opening_braces
+
+# Idiomatic Rules Discussion
+ - discouraged_none_name
+ - explicit_init
+ - function_default_parameter_at_end
+ - implicitly_unwrapped_optional
+ - legacy_objc_type
+ - toggle_bool
+ - unavailable_function
+
+# Lint Rules Discussion
+ - discarded_notification_center_observer
+ - identical_operands
+ - unowned_variable_capture
+ - yoda_condition
+
+# Style Rule Discussion
+ - attributes
+ - file_types_order
+ - modifier_order
+ - multiline_function_chains
+ - optional_enum_case_matching
+ - sorted_imports
+ - type_contents_order
+
+# Analyzer Rules
 analyzer_rules:
   - explicit_self
-force_cast: error
-force_try:
-  severity: error
-line_length:
-  warning: 300
-type_body_length:
-  warning: 300
-file_length:
-  warning: 500
+
+# Default Rule Adjustments
+# Idiomatic Configuration
 type_name:
-  min_length: 3
+  min_length:
+    warning: 3
+    error: 0
   max_length: 
     warning: 40
     error: 60
+
+# Metrics Configuration
+cyclomatic_complexity:
+  ignores_case_statements: true
+file_length:
+  warning: 500
+  error: 800
+function_body_length:
+  warning: 50
+  error: 80
+line_length:
+  warning: 300
+  error: 300
+nesting:
+  type_level: 2
+  function_level: 3
+type_body_length:
+  warning: 300
+  error: 450
+
+# Style Configuration
 identifier_name:
-  min_length: 3
+  min_length: 
+    warning: 3
+    error: 0
   max_length: 
     warning: 40
     error: 60
@@ -29,6 +128,172 @@ identifier_name:
   - id
   - URL
   - GlobalAPIKey
-nesting:
-  type_level: 2
+  - x
+  - y
+multiple_closures_with_trailing_closure:
+  severity: error
+
+# Opt-In Configuration
+# Idiomatic Configuration
+fatal_error_message:
+  severity: warning
+file_name_no_space:
+  severity: warning
+force_unwrapping:
+  severity: warning
+joined_default_parameter:
+  severity: warning
+legacy_multiple:
+  severity: warning
+prefer_zero_over_explicit_init:
+  severity: warning
+redundant_nil_coalescing:
+  severity: warning
+return_value_from_void_function:
+  severity: warning
+static_operator:
+  severity: warning
+
+# Lint Configuration
+anyobject_protocol:
+  severity: warning
+overridden_super_call:
+  severity: error
+prohibited_interface_builder:
+  severity: error
+prohibited_super_call:
+  severity: error
+weak_delegate:
+  severity: warning
+
+# Metrics Configuration
+closure_body_length:
+  warning: 30
+  error: 100
+enum_case_associated_values_count:
+  warning: 3
+  error: 6
+
+# Performance Configuration
+contains_over_filter_count:
+  severity: warning
+contains_over_filter_is_empty:
+  severity: warning
+contains_over_first_not_nil:
+  severity: warning
+contains_over_range_nil_comparison:
+  severity: warning
+empty_collection_literal:
+  severity: warning
+empty_count:
+  severity: warning
+empty_string:
+  severity: warning
+first_where:
+  severity: warning
+flatmap_over_map_reduce:
+  severity: warning 
+last_where:
+  severity: warning
+reduce_into:
+  severity: warning
+sorted_first_last:
+  severity: warning
+
+# Style Configuration
+closure_end_indentation:
+  severity: warning
+closure_spacing:
+  severity: warning
+collection_alignment:
+  severity: warning
+implicit_return:
+  severity: warning
+indentation_width:
+  severity: warning
+legacy_multiple:
+  severity: warning
+literal_expression_end_indentation:
+  severity: warning
+multiline_arguments:
+  severity: warning
+multiline_arguments_brackets:
+  severity: warning
+multiline_literal_brackets:
+  severity: warning
+multiline_parameters:
+  severity: warning
+multiline_parameters_brackets:
+  severity: warning
+operator_usage_whitespace:
+  severity: warning
+trailing_closure:
+  severity: warning
+unneeded_parentheses_in_closure_argument:
+  severity: warning
+vertical_parameter_alignment_on_call:
+  severity: warning
+vertical_whitespace_closing_braces:
+  severity: warning
+vertical_whitespace_opening_braces:
+  severity: warning
+
+# Opt-In Discussion Configuration
+# Idiomatic Configuration
+discouraged_none_name:
+  severity: warning
+explicit_init:
+  severity: warning
+function_default_parameter_at_end:
+  severity: warning
+implicitly_unwrapped_optional:
+  severity: warning
+  mode: all
+legacy_objc_type:
+  severity: warning
+toggle_bool:
+  severity: warning
+unavailable_function:
+  severity: warning
+
+# Lint Configuration
+discarded_notification_center_observer:
+  severity: warning
+identical_operands:
+  severity: warning
+unowned_variable_capture:
+  severity: warning
+yoda_condition:
+  severity: warning
+
+# Style Configuration
+attributes:
+  severity: warning
+  always_on_same_line: [“@NSManaged”]
+file_types_order:
+  severity: warning
+modifier_order:
+  severity: warning
+multiline_function_chains:
+  severity: warning
+optional_enum_case_matching:
+  severity: warning
+sorted_imports:
+  severity: warning
+type_contents_order:
+  severity: warning
+  order: [
+    [SwiftLintFramework.TypeContent.case],
+    [SwiftLintFramework.TypeContent.typeAlias, SwiftLintFramework.TypeContent.associatedType], 
+    [SwiftLintFramework.TypeContent.subtype], 
+    [SwiftLintFramework.TypeContent.typeProperty], 
+    [SwiftLintFramework.TypeContent.instanceProperty], 
+    [SwiftLintFramework.TypeContent.initializer],
+    [SwiftLintFramework.TypeContent.deinitializer], 
+    [SwiftLintFramework.TypeContent.typeMethod], 
+    [SwiftLintFramework.TypeContent.viewLifeCycleMethod], 
+    [SwiftLintFramework.TypeContent.otherMethod], 
+    [SwiftLintFramework.TypeContent.subscript]
+  ]
+
 reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)
