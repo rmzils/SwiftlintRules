@@ -56,7 +56,6 @@ opt_in_rules:
  - unneeded_parentheses_in_closure_argument
  - vertical_parameter_alignment_on_call
  - vertical_whitespace_closing_braces
- - vertical_whitespace_opening_braces
 
 # Idiomatic Rules Discussion
  - discouraged_none_name
@@ -231,8 +230,6 @@ unneeded_parentheses_in_closure_argument:
 vertical_parameter_alignment_on_call:
   severity: warning
 vertical_whitespace_closing_braces:
-  severity: warning
-vertical_whitespace_opening_braces:
   severity: warning
 
 # Opt-In Discussion Configuration
