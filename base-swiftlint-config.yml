@@ -105,7 +105,7 @@ function_body_length:
   warning: 50
   error: 80
 line_length:
-  warning: 300
+  warning: 120
   error: 300
 nesting:
   type_level: 2
