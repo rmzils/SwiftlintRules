@@ -9,11 +9,9 @@ opt_in_rules:
  - fatal_error_message
  - file_name_no_space
  - force_unwrapping
- - function_default_parameter_at_end
  - implicitly_unwrapped_optional
  - joined_default_parameter
  - legacy_multiple
- - legacy_objc_type
  - prefer_zero_over_explicit_init
  - redundant_nil_coalescing
  - return_value_from_void_function
@@ -136,16 +134,12 @@ file_name_no_space:
   severity: warning
 force_unwrapping:
   severity: warning
-function_default_parameter_at_end:
-  severity: warning
 implicitly_unwrapped_optional:
   severity: warning
   mode: all
 joined_default_parameter:
   severity: warning
 legacy_multiple:
-  severity: warning
-legacy_objc_type:
   severity: warning
 prefer_zero_over_explicit_init:
   severity: warning
