@@ -1,5 +1,5 @@
 excluded:
-  - Pods, Tests, Products, Frameworks
+  - Pods, Products, Frameworks
 
 # Opt-In Rules
 opt_in_rules:
@@ -135,6 +135,7 @@ file_name_no_space:
 force_unwrapping:
   severity: warning
 implicitly_unwrapped_optional:
+  excluded: ".*Test\\.swift"
   severity: warning
   mode: all
 joined_default_parameter:
