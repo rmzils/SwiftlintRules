@@ -1,5 +1,5 @@
 excluded:
-  - Pods, Tests, Products, Frameworks
+  - Pods, Products, Frameworks
 
 # Opt-In Rules
 opt_in_rules:
@@ -20,7 +20,6 @@ opt_in_rules:
  - unavailable_function
 
 # Lint Rules
- - anyobject_protocol
  - discarded_notification_center_observer
  - identical_operands
  - overridden_super_call
@@ -85,6 +84,11 @@ type_name:
   max_length: 
     warning: 40
     error: 60
+
+# Lint Configuration
+blanket_disable_command:
+  severity: warning
+  allowed_rules: ["file_length", "type_body_length", "implicitly_unwrapped_optional"]
 
 # Metrics Configuration
 cyclomatic_complexity:
@@ -155,8 +159,6 @@ unavailable_function:
   severity: warning
 
 # Lint Configuration
-anyobject_protocol:
-  severity: warning
 discarded_notification_center_observer:
   severity: warning
 identical_operands:
@@ -211,7 +213,7 @@ sorted_first_last:
 # Style Configuration
 attributes:
   severity: warning
-  always_on_same_line: [“@NSManaged”]
+  always_on_same_line: [“@NSManaged”, "@Debounced"]
 closure_end_indentation:
   severity: warning
 closure_spacing:
