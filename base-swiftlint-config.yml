@@ -85,6 +85,11 @@ type_name:
     warning: 40
     error: 60
 
+# Lint Configuration
+blanket_disable_command:
+  severity: warning
+  allowed_rules: ["file_length", "type_body_length", "implicitly_unwrapped_optional"]
+
 # Metrics Configuration
 cyclomatic_complexity:
   ignores_case_statements: true
@@ -134,7 +139,6 @@ file_name_no_space:
 force_unwrapping:
   severity: warning
 implicitly_unwrapped_optional:
-  excluded: ".*Test\\.swift"
   severity: warning
   mode: all
 joined_default_parameter:
