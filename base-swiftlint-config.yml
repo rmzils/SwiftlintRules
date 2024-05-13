@@ -163,7 +163,7 @@ toggle_bool:
 unavailable_function:
   severity: warning
 xct_specific_matcher:
-  sererity: error
+  severity: error
   matchers: [one-argument-asserts, two-argument-asserts]
 
 # Lint Configuration
