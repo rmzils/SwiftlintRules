@@ -28,6 +28,7 @@ opt_in_rules:
  - overridden_super_call
  - prohibited_interface_builder
  - prohibited_super_call 
+ - test_case_accessibility
  - unowned_variable_capture
  - weak_delegate
  - yoda_condition
@@ -183,6 +184,10 @@ prohibited_interface_builder:
   severity: error
 prohibited_super_call:
   severity: error
+test_case_accessibility:
+  severity: error
+  allowed_prefixes: []
+  test_parent_classes: ["XCTestCase"]
 unowned_variable_capture:
   severity: warning
 weak_delegate:
