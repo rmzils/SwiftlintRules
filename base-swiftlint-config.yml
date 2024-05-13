@@ -44,7 +44,7 @@ opt_in_rules:
  - empty_collection_literal
  - empty_count
  - empty_string
- - final_test_class
+ - final_test_case
  - first_where
  - flatmap_over_map_reduce
  - last_where
@@ -213,7 +213,7 @@ empty_count:
   severity: warning
 empty_string:
   severity: warning
-final_test_class:
+final_test_case:
   severity: error
 first_where:
   severity: warning
