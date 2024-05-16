@@ -18,6 +18,7 @@ opt_in_rules:
  - static_operator
  - toggle_bool
  - unavailable_function
+ - untyped_error_in_catch
 
 # Lint Rules
  - discarded_notification_center_observer
@@ -64,6 +65,7 @@ opt_in_rules:
  - multiline_parameters_brackets
  - operator_usage_whitespace
  - optional_enum_case_matching
+ - sorted_enum_cases
  - sorted_imports
  - trailing_closure
  - type_contents_order
@@ -157,6 +159,8 @@ toggle_bool:
   severity: warning
 unavailable_function:
   severity: warning
+untyped_error_in_catch:
+  severity: warning
 
 # Lint Configuration
 discarded_notification_center_observer:
@@ -243,6 +247,8 @@ multiline_parameters_brackets:
 operator_usage_whitespace:
   severity: warning
 optional_enum_case_matching:
+  severity: warning
+sorted_enum_cases:
   severity: warning
 sorted_imports:
   severity: warning
