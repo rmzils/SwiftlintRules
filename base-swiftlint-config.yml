@@ -27,6 +27,7 @@ opt_in_rules:
  - unavailable_function
  - xct_specific_matcher
  - unhandled_throwing_task
+ - untyped_error_in_catch
 
 # Lint Rules
  - balanced_xctest_lifecycle
@@ -85,6 +86,7 @@ opt_in_rules:
  - prefer_self_in_static_references
  - prefer_self_type_over_type_of_self
  - redundant_self_in_closure
+ - sorted_enum_cases
  - sorted_imports
  - trailing_closure
  - type_contents_order
@@ -196,6 +198,7 @@ xct_specific_matcher:
   severity: error
   matchers: [one-argument-asserts, two-argument-asserts]
 unhandled_throwing_task:
+untyped_error_in_catch:
   severity: warning
 
 # Lint Configuration
@@ -311,6 +314,7 @@ prefer_self_in_static_references:
 prefer_self_type_over_type_of_self:
   severity: warning
 redundant_self_in_closure:
+sorted_enum_cases:
   severity: warning
 sorted_imports:
   severity: warning
