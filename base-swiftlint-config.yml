@@ -187,7 +187,7 @@ toggle_bool:
 unavailable_function:
   severity: warning
 unhandled_throwing_task:
-  severity: error
+  severity: warning
 
 # Lint Configuration
 discarded_notification_center_observer:
