@@ -26,7 +26,6 @@ opt_in_rules:
  - prohibited_interface_builder
  - prohibited_super_call
  - unowned_variable_capture
- - unused_capture_list
  - weak_delegate
  - yoda_condition
 
@@ -175,8 +174,6 @@ prohibited_interface_builder:
 prohibited_super_call:
   severity: error
 unowned_variable_capture:
-  severity: warning
-unused_capture_list:
   severity: warning
 weak_delegate:
   severity: warning
