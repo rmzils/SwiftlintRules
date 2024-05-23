@@ -22,7 +22,6 @@ opt_in_rules:
  - return_value_from_void_function
  - shorthand_optional_binding
  - static_operator
- - strict_fileprivate
  - toggle_bool
  - unavailable_function
  - unhandled_throwing_task
@@ -178,8 +177,6 @@ return_value_from_void_function:
 shorthand_optional_binding:
   severity: warning
 static_operator:
-  severity: warning
-strict_fileprivate:
   severity: warning
 toggle_bool:
   severity: warning
