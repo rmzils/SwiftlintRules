@@ -18,13 +18,17 @@ opt_in_rules:
  - static_operator
  - toggle_bool
  - unavailable_function
+ - xct_specific_matcher
 
 # Lint Rules
+ - balanced_xctest_lifecycle
  - discarded_notification_center_observer
+ - empty_xctest_method
  - identical_operands
  - overridden_super_call
  - prohibited_interface_builder
  - prohibited_super_call 
+ - test_case_accessibility
  - unowned_variable_capture
  - weak_delegate
  - yoda_condition
@@ -41,6 +45,7 @@ opt_in_rules:
  - empty_collection_literal
  - empty_count
  - empty_string
+ - final_test_case
  - first_where
  - flatmap_over_map_reduce
  - last_where
@@ -64,6 +69,7 @@ opt_in_rules:
  - multiline_parameters_brackets
  - operator_usage_whitespace
  - optional_enum_case_matching
+ - single_test_class
  - sorted_imports
  - trailing_closure
  - type_contents_order
@@ -157,10 +163,19 @@ toggle_bool:
   severity: warning
 unavailable_function:
   severity: warning
+xct_specific_matcher:
+  severity: error
+  matchers: [one-argument-asserts, two-argument-asserts]
 
 # Lint Configuration
+balanced_xctest_lifecycle:
+  severity: error
+  test_parent_classes: ["XCTestCase"]
 discarded_notification_center_observer:
   severity: warning
+empty_xctest_method:
+  severity: warning
+  test_parent_classes: ["XCTestCase"]
 identical_operands:
   severity: warning
 overridden_super_call:
@@ -169,6 +184,10 @@ prohibited_interface_builder:
   severity: error
 prohibited_super_call:
   severity: error
+test_case_accessibility:
+  severity: error
+  allowed_prefixes: []
+  test_parent_classes: ["XCTestCase"]
 unowned_variable_capture:
   severity: warning
 weak_delegate:
@@ -199,6 +218,8 @@ empty_count:
   severity: warning
 empty_string:
   severity: warning
+final_test_case:
+  severity: error
 first_where:
   severity: warning
 flatmap_over_map_reduce:
@@ -244,6 +265,8 @@ operator_usage_whitespace:
   severity: warning
 optional_enum_case_matching:
   severity: warning
+single_test_class:
+  severity: error
 sorted_imports:
   severity: warning
 trailing_closure:
