@@ -251,17 +251,17 @@ trailing_closure:
 type_contents_order:
   severity: warning
   order: [
-    [SwiftLintFramework.TypeContent.case],
-    [SwiftLintFramework.TypeContent.typeAlias, SwiftLintFramework.TypeContent.associatedType], 
-    [SwiftLintFramework.TypeContent.subtype], 
-    [SwiftLintFramework.TypeContent.typeProperty], 
-    [SwiftLintFramework.TypeContent.instanceProperty], 
-    [SwiftLintFramework.TypeContent.initializer],
-    [SwiftLintFramework.TypeContent.deinitializer], 
-    [SwiftLintFramework.TypeContent.typeMethod], 
-    [SwiftLintFramework.TypeContent.viewLifeCycleMethod], 
-    [SwiftLintFramework.TypeContent.otherMethod], 
-    [SwiftLintFramework.TypeContent.subscript]
+    [case],
+    [type_alias, associated_type], 
+    [subtype], 
+    [type_property], 
+    [instance_property], 
+    [initializer],
+    [deinitializer], 
+    [type_method], 
+    [view_life_cycle_method], 
+    [other_method], 
+    [subscript]
   ]
 unneeded_parentheses_in_closure_argument:
   severity: warning
