@@ -30,7 +30,6 @@ opt_in_rules:
 # Lint Rules
  - discarded_notification_center_observer
  - identical_operands
- - inert_defer
  - local_doc_comment
  - override_in_extension
  - overridden_super_call
@@ -193,8 +192,6 @@ unhandled_throwing_task:
 discarded_notification_center_observer:
   severity: warning
 identical_operands:
-  severity: warning
-inert_defer:
   severity: warning
 local_doc_comment:
   severity: warning
